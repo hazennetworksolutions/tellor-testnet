@@ -1,0 +1,15 @@
+<h1 align="center"> Tellor Testnet v6.0.0 Upgrade with Cosmovisor </h1>
+
+
+```
+mkdir -p $HOME/.layer/cosmovisor/upgrades/v6.0.0/bin
+
+wget https://github.com/tellor-io/layer/releases/download/v6.0.0/layer_Linux_x86_64.tar.gz
+tar -xvf layer_Linux_x86_64.tar.gz
+
+sudo mv layerd $HOME/.layer/cosmovisor/upgrades/v6.0.0/bin/
+chmod +x $HOME/.layer/cosmovisor/upgrades/v6.0.0/bin/layerd
+
+sudo ln -sfn $HOME/.layer/cosmovisor/upgrades/v6.0.0 $HOME/.layer/cosmovisor/current
+sudo ln -sfn $HOME/.layer/cosmovisor/current/bin/layerd /usr/local/bin/layerd
+```
